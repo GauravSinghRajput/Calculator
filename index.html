@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="calculator">
+
+    <div class="title">
+        <h2> Calculator</h2>
+    </div>
+
+    <div class="display">
+        <div id="expression"></div>
+        <div id="result">0</div>
+    </div>
+
+    <div class="buttons">
+
+        <!-- Scientific Functions -->
+        <button onclick="scientific('sin')">sin</button>
+        <button onclick="scientific('cos')">cos</button>
+        <button onclick="scientific('tan')">tan</button>
+        <button onclick="scientific('sqrt')">√</button>
+
+        <button onclick="scientific('log')">log</button>
+        <button onclick="scientific('ln')">ln</button>
+        <button onclick="scientific('square')">x²</button>
+        <button onclick="scientific('cube')">x³</button>
+
+        <button onclick="scientific('power')">xʸ</button>
+        <button onclick="scientific('factorial')">x!</button>
+        <button onclick="appendValue('π')">π</button>
+        <button onclick="appendValue('e')">e</button>
+
+        <!-- Basic -->
+        <button class="clear" onclick="clearCalculator()">AC</button>
+        <button onclick="deleteLast()">DEL</button>
+        <button onclick="appendValue('(')">(</button>
+        <button onclick="appendValue(')')">)</button>
+
+        <button onclick="appendValue('7')">7</button>
+        <button onclick="appendValue('8')">8</button>
+        <button onclick="appendValue('9')">9</button>
+        <button class="operator" onclick="appendValue('/')">÷</button>
+
+        <button onclick="appendValue('4')">4</button>
+        <button onclick="appendValue('5')">5</button>
+        <button onclick="appendValue('6')">6</button>
+        <button class="operator" onclick="appendValue('*')">×</button>
+
+        <button onclick="appendValue('1')">1</button>
+        <button onclick="appendValue('2')">2</button>
+        <button onclick="appendValue('3')">3</button>
+        <button class="operator" onclick="appendValue('-')">−</button>
+
+        <button class="zero" onclick="appendValue('0')">0</button>
+        <button onclick="appendValue('.')">.</button>
+        <button class="operator" onclick="appendValue('+')">+</button>
+
+        <button class="equal" onclick="calculate()">=</button>
+
+    </div>
+
+    <div class="mode">
+        <span>Angle Mode: DEG</span>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
